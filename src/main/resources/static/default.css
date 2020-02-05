@@ -330,10 +330,40 @@ hr {
 	#banner 
 	{
 		overflow: hidden;
-		height: 500px;
-		background: url(https://images.unsplash.com/photo-1561414926-7f3f921a2e18?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60) no-repeat center;
+		height: 400px;
+		background: url(https://images.pexels.com/photos/267582/pexels-photo-267582.jpeg?cs=srgb&dl=accounting-administration-books-business-267582.jpg&fm=jpg) no-repeat center;
 		background-size: cover;
 	}
+	#bannereventos
+    	{
+    		overflow: hidden;
+    		height: 700px;
+    		background: url(https://images.pexels.com/photos/3184424/pexels-photo-3184424.jpeg?cs=srgb&dl=photo-of-people-holding-each-other-s-hands-3184424.jpg&fm=jpg) no-repeat center;
+    		background-size: cover;
+    	}
+    	#bannerquiz
+        {
+       		overflow: hidden;
+        	height: 500px;
+        	background: url(https://images.unsplash.com/photo-1539628399213-d6aa89c93074?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80) no-repeat center;
+        	background-size: cover;
+        }
+        #bannersobrenos
+       	{
+            background	overflow: hidden;
+           	height: 400px;
+            background: url(https://images.pexels.com/photos/3183183/pexels-photo-3183183.jpeg?cs=srgb&dl=photo-of-people-leaning-on-wooden-table-3183183.jpg&fm=jpg) no-repeat center;
+           	background-size: cover;
+         }
+
+         #bannerrecomendacao
+        {
+            background	overflow: hidden;
+           	height: 400px;
+            background: url(https://s3-ap-southeast-1.amazonaws.com/images.humanresourcesonline.net/wp-content/uploads/2018/11/13112420/Jerene-Nov-2018-idea-lightbulbs-123RF.jpg) no-repeat center;
+           	background-size: cover;
+        }
+
 	
 
 /** MENU */

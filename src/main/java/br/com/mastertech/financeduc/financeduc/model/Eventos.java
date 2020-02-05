@@ -19,7 +19,7 @@ public class Eventos {
     @Column
     private String imagem;
     @Column
-    private Date data;
+    private String data;
     @Column
     private LocalDate dataCriacao;
     @Column
@@ -67,11 +67,11 @@ public class Eventos {
         this.imagem = imagem;
     }
 
-    public Date getData() {
+    public String getData() {
         return data;
     }
 
-    public void setData(Date data) {
+    public void setData(String data) {
         this.data = data;
     }
 
