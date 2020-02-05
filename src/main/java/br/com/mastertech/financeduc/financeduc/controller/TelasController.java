@@ -21,9 +21,9 @@ public class TelasController {
         return "sobrenos";
     }
 
-    @GetMapping("/nutrir")
+    @GetMapping("/cadastrar")
     public String mostrarNutrir(){
-        return "nutrir";
+        return "CadastrarEventos";
     }
 
 }
