@@ -14,4 +14,8 @@ public class PerguntaService {
         return repository.save(pergunta);
     }
 
+    public Iterable<Pergunta> listarTodos() {
+        Iterable<Pergunta> perguntas = repository.findAll();
+        return perguntas;
+    }
 }
