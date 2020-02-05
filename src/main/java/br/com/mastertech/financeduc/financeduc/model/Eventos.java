@@ -1,12 +1,10 @@
 package br.com.mastertech.financeduc.financeduc.model;
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.util.Date;
 
 @Entity
-@Table(name ="Eventos")
+@Table(name = "eventos")
 public class Eventos {
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
@@ -19,13 +17,15 @@ public class Eventos {
     @Column
     private String imagem;
     @Column
-    private Date data;
+    private String tipo;
     @Column
-    private LocalDate dataCriacao;
+    private String data;
     @Column
     private String horario;
     @Column
-    private String tipo;
+    private LocalDate dataCriacao;
+    @Column
+    private Boolean ativo;
 
     public long getId() {
         return id;
@@ -67,20 +67,20 @@ public class Eventos {
         this.imagem = imagem;
     }
 
-    public Date getData() {
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public String getData() {
         return data;
     }
 
-    public void setData(Date data) {
+    public void setData(String data) {
         this.data = data;
-    }
-
-    public LocalDate getDataCriacao() {
-        return dataCriacao;
-    }
-
-    public void setDataCriacao(LocalDate dataCriacao) {
-        this.dataCriacao = dataCriacao;
     }
 
     public String getHorario() {
@@ -91,12 +91,19 @@ public class Eventos {
         this.horario = horario;
     }
 
-    public String getTipo() {
-        return tipo;
+    public LocalDate getDataCriacao() {
+        return dataCriacao;
     }
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+    public void setDataCriacao(LocalDate dataCriacao) {
+        this.dataCriacao = dataCriacao;
+    }
+
+    public Boolean getAtivo() {
+        return ativo;
+    }
+
+    public void setAtivo(Boolean ativo) {
+        this.ativo = ativo;
     }
 }
-
