@@ -27,8 +27,9 @@
 					<ul>
 						<li><a href="telaRecomendacoes">Recomendações</a></li>
 						<li><a href="sobrenos">Sobre nós</a></li>
-						<li><a href="nutrir" class="active">Quero nutrir a plataforma</a></li>
+						<li><a href="cadastrar">Cadastrar eventos</a></li>
 						<li><a href="login">Login</a></li>
+						<li><a href="iniciarQuiz">Iniciar Quiz</a></li>
 					</ul>
 				</div>
 				<!-- end #menu -->
@@ -38,19 +39,39 @@
 			<div id="page" class="container">
 				<h1>Cadastre aqui os seus cursos, links de videos e documentos</h1>
 
-				<form action="/cadastrar" class="formulario"> <!-- -->
+				<form action="/cadastrar" method="post" class="formulario"> <!-- -->
 					<div class="campo">
-						<label>Digite seu nome:</label>
+						<label>Tipo:</label>
+						<select name="tipo">
+							<option value="curso">Curso</option>
+							<option value="evento">Evento</option>
+							<option value="palestra">Palestra</option>
+						</select>
+					</div>
+					<div class="campo">
+						<label>Nome: </label>
 						<input type="text" name="nome">
 					</div>
 
 					<div class="campo">
-						<label>Digite seu email:</label>
+						<label>E-mail: </label>
 						<input type="text" name="email">
 					</div>
 
+					<div>
+						<label>Descrição: </label>
+						<textarea name="descricao"></textarea>
+					</div>
+
 					<div class="campo">
-						<label>Link dos seus cursos:</label><br>
+						<label>Horário: </label>
+						<input type="text" name="horario">
+						<label>Data: </label>
+						<input type="date" name="data">
+					</div>
+
+					<div class="campo">
+						<label>Link videos ou imagem:</label><br>
 						<textarea name="link" id="" cols="30" rows="10"></textarea>
 					</div>
 
@@ -59,7 +80,6 @@
 
 			</div>
 		</div>
-
 
 
 		<div id="copyright" class="container">
