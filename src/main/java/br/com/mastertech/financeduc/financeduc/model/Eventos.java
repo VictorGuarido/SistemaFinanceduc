@@ -1,6 +1,7 @@
 package br.com.mastertech.financeduc.financeduc.model;
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.Date;
 
 @Entity
 @Table(name = "eventos")
