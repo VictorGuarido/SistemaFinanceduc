@@ -32,8 +32,6 @@ public class EventosController {
         return "CadastrarEventos";
 
     }
-
-
     @GetMapping("/recomendacoes")
     public ModelAndView listarEventos() {
         ModelAndView pagina = new ModelAndView("recomendacoes");
