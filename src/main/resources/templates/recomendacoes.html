@@ -25,7 +25,7 @@
             <div id="menu-wrapper">
                 <div id="menu" class="container">
                     <ul>
-                        <li><a href="telaRecomendacoes">Recomendações</a></li>
+                        <li><a href="recomendacoes">Recomendações</a></li>
                         <li><a href="sobrenos">Sobre nós</a></li>
                         <li><a href="cadastrar">Cadastrar eventos</a></li>
                         <li><a href="login">Login</a></li>
@@ -37,45 +37,30 @@
             <div id="bannerrecomendacao"></div>
             <div id="page" class="container">
                 <div class="containerRecomendacoes">
-                    <h3>Cursos:</h3>
-                    <div class="curso">
-                        <img src="https://agazetaempregos.com.br/images/2018/AnalistaEstrategia.jpg" alt="Curso tal">
-                        <p></p>
+                    <h1> Cadastrados.</h1>
+                    <div th:each="eventos : ${eventos}">
+                        <div>
+                            <br>
+                            <br>
+                                <a th:href="@{'/eventos/'+${eventos.nome}}">
+                                    <span th:text="${eventos.nome}"></span>
+                                </a>
+                            </p>
+
+                            <br>
+                            <img th:src="${eventos.imagem}" width="30%">
+                            <p><strong>Tipo: </strong><Span th:text="${eventos.tipo}"></Span></p>
+                            <p><strong>Horário: </strong><Span th:text="${eventos.horario}"></Span></p>
+                            <p><strong>Data: </strong><Span th:text="${eventos.data}"></Span></p>
+                            <p><strong>Descrição: </strong><Span th:text="${eventos.descricao}"></Span></p>
+
+                        </div>
                     </div>
 
-                    <div class="curso">
-                        <img src="https://agazetaempregos.com.br/images/2018/AnalistaEstrategia.jpg" alt="Curso tal">
-                        <p>/p>
-                    </div>
-
-                    <div class="curso">
-                        <img src="https://agazetaempregos.com.br/images/2018/AnalistaEstrategia.jpg" alt="Curso tal">
-                        <p></p>
-                    </div>
-                </div>
-        <br>
-                <div class="containerRecomendacoes">
-                    <h3>Palestras:</h3>
-                    <div class="palestra">
-                        <img src="" alt="">
-                        <p>Descrição: </p>
-                    </div>
-
-                    <div class="palestra">
-                        <img src="" alt="">
-                        <p>Descrição: </p>
-                    </div>
-
-                    <div class="palestra">
-                        <img src="" alt="">
-                        <p>Descrição: </p>
-                    </div>
-                </div>
             </div>
         </div>
 
-
-
+        </div>
         <div id="copyright" class="container">
             <p> © Copyright FinancEduc 2020 </a>.</p>
         </div>
