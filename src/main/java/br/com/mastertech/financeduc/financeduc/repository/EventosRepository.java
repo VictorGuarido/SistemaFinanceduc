@@ -7,4 +7,5 @@ import java.util.Optional;
 
 public interface EventosRepository extends CrudRepository<Eventos, String> {
 
+    Optional<Eventos> findByNome(String nome);
 }

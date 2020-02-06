@@ -7,7 +7,7 @@ html, body {
 	flex-wrap: wrap;
 	justify-content: space-between;
 	width: 100%;
-	height: 300px;
+	height: 23px;
 	background-color: rgb(206, 206, 206);
 }
 
@@ -337,7 +337,7 @@ hr {
 	#bannereventos
     	{
     		overflow: hidden;
-    		height: 700px;
+    		height: 500px;
     		background: url(https://images.pexels.com/photos/3184424/pexels-photo-3184424.jpeg?cs=srgb&dl=photo-of-people-holding-each-other-s-hands-3184424.jpg&fm=jpg) no-repeat center;
     		background-size: cover;
     	}
@@ -359,8 +359,8 @@ hr {
          #bannerrecomendacao
         {
             background	overflow: hidden;
-           	height: 400px;
-            background: url(https://s3-ap-southeast-1.amazonaws.com/images.humanresourcesonline.net/wp-content/uploads/2018/11/13112420/Jerene-Nov-2018-idea-lightbulbs-123RF.jpg) no-repeat center;
+           	height: 500px;
+            background: url(https://cio.com.br/wp-content/uploads/2019/03/idea_1190069647.jpg) no-repeat center;
            	background-size: cover;
         }
 
