@@ -28,7 +28,6 @@
 						<li><a href="recomendacoes">Recomendações</a></li>
 						<li><a href="sobrenos">Sobre nós</a></li>
 						<li><a href="cadastrar">Cadastrar eventos</a></li>
-						<li><a href="login">Login</a></li>
 						<li><a href="iniciarQuiz">Iniciar Quiz</a></li>
 					</ul>
 				</div>
@@ -37,44 +36,46 @@
 			<div id="bannereventos"></div>
 
 			<div id="page" class="container">
-				<h1>Cadastre aqui os seus cursos, paletras ou eventos.</h1>
+				<h1>Cadastre aqui os seus cursos, eventos e palestras</h1>
+
 
 				<form action="/cadastrar" method="post" class="formulario"> <!-- -->
 					<div class="campo">
 						<label>Tipo:</label>
-						<select name="tipo">
+						<select name="tipo" required>
 							<option value="curso">Curso</option>
 							<option value="evento">Evento</option>
 							<option value="palestra">Palestra</option>
 						</select>
 					</div>
-					<div class="campo">
+					<div class="campo" >
 						<label>Nome: </label>
-						<input type="text" name="nome">
+						<input type="text" name="nome" required>
 					</div>
 
 					<div class="campo">
 						<label>E-mail: </label>
-						<input type="email" name="email">
+						<input type="email" name="email" required>
 					</div>
 					<div class="campo">
 						<label>URL Imagem: </label>
-						<input type="text" name="imagem">
+						<input type="text" name="imagem" required>
 					</div>
 
 					<div class="campo">
 						<label>Horário: </label>
-						<input type="time" name="horario">
+						<input type="time" name="horario" required>
 						<label>Data: </label>
-						<input type="date" name="data" min="0000-00-00" max="2021-40-50">
+						<input type="date" name="data" min="0000-00-00" max="2021-40-50" required>
 					</div>
 
 					<div>
 						<label>Descrição: </label>
-						<textarea name="descricao"></textarea>
+						<textarea  required name="descricao"></textarea>
 					</div>
 
 					<button>Enviar</button>
+					<p th:text="${msg}"></p>
 				</form>
 
 			</div>

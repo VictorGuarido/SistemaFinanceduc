@@ -9,7 +9,10 @@
     <meta name="description" content="" />
     <link href="http://fonts.googleapis.com/css?family=Chivo:400,900" rel="stylesheet" />
     <link href="default.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="quiz.css" rel="stylesheet" type="text/css" media="all" />
     <link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+    <script type="text/javascript" th:src="@{/js/funcao.js}"></script>
+
 
 </head>
 <body>
@@ -28,30 +31,117 @@
                 <li><a href="recomendacoes">Recomendações</a></li>
                 <li><a href="sobrenos">Sobre nós</a></li>
                 <li><a href="cadastrar">Cadastrar eventos</a></li>
-                <li><a href="login">Login</a></li>
-                <li><a href="iniciarQuiz">Iniciar Quiz</a></li>
+                <li><a href="iniciarQuiz" class="active">Iniciar Quiz</a></li>
             </ul>
         </div>
         <!-- end #menu -->
     </div>
-    <div id="bannerquiz"></div>
-
-
-    <div id="page" class="container">
-        <div th:each="pergunta : ${perguntas}" class="formulario">
-            <div>
-                <p>Pergunta:
-                    <span th:text="${pergunta.texto}"> </span>
-                </p>
-
-                <p>Resposta:
-                    <span th:text="${pergunta.resposta}"> </span>
-                </p>
-
-            </div>
-        </div>
-    </div>
 </div>
+<aside>
+    <h2 class="quizHeader">Faça o QUIZ!</h2>
+
+    <table style="width:583px">
+        <tr>
+            <td>
+                <div>
+                    <p class="question">1- O que são finanças pessoais?</p>
+
+                    <ul>
+                        <input class="answer" type="radio" name="q1" value="1">
+                        <label id="correctString1">É o dinheiro que entra e sai do bolso da pessoa. É como a pessoa usa o dinheiro para a vida, na alimentação, moradia, saúde, educação e diversão e etc.</label>
+                        <br>
+                        <input class="answer" type="radio" name="q1" value="0">
+                        <label>Pensar no quanto você não gastou.</label>
+                        <br>
+                        <input class="answer" type="radio" name="q1" value="0">
+                        <label>Fazer uma lista do que pode e não pode gastar.</label>
+                        <br>
+                        <input class="answer" type="radio" name="q1" value="0">
+                        <label>É sobre não fazer gastos exagerados.</label>
+                    </ul>
+                </div>
+            </td>
+            <td>
+                <div>
+                    <p class="question">2- Quando dívida vira investimento?</p>
+
+                    <ul>
+                        <input class="answer" type="radio" name="q2" value="0">
+                        <label>Quando eu quero realizar planos.</label>
+                        <br>
+                        <input class="answer" type="radio" name="q2" value="1">
+                        <label id="correctString2">Quando a pessoa investe na educação, na perfomace profissional, na casa própria, num plano de aposentadoria privada, na viagem dos sonhos ou seja em tudo que traga beneficio seja ele financeiro ou pessoal.</label>
+                        <br>
+                        <input class="answer" type="radio" name="q2" value="0">
+                        <label> É errado. Não posso usar o meu dinheiro, pois vou fazer mais dívidas.</label>
+                        <br>
+                        <input class="answer" type="radio" name="q2" value="0">
+                        <label>Quando eu quero abrir uma empresa.</label>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div>
+                    <p class="question">3- Se a pessoa já está endividada, como fazer para acabar com as dívidas?</p>
+
+                    <ul>
+                        <input class="answer" type="radio" name="q3" value="0">
+                        <label>Parar imediatamente de comprar algo e o dinheiro que entrar for só para pagar as dívidas.</label>
+                        <br>
+                        <input class="answer" type="radio" name="q3" value="1">
+                        <label id="correctString3">Faça um planejamento financeiro para saber como está a situação, Priorize o pagamento das dividas, evitando gastos supérfluos.</label>
+                        <br>
+                        <input class="answer" type="radio" name="q3" value="0">
+                        <label>Fazer um empréstimo e pagar todas as dívidas.</label>
+                        <br>
+                        <input class="answer" type="radio" name="q3" value="0">
+                        <label>Apostar em novos investimentos.</label>
+                    </ul>
+                </div>
+            </td>
+            <td>
+                <div>
+                    <p class="question">4- Como faço meu dinheiro render mais?</p>
+
+                    <ul>
+                        <input class="answer" type="radio" name="q4" value="0">
+                        <label>Não comprar absolutamente nada.</label>
+                        <br>
+                        <input class="answer" type="radio" name="q4" value="1">
+                        <label id="correctString4">Planejar o consumo e pensar antes de comprar, fazer compras inteligentes, poupar para comprar, eliminar pagamentos que acumulam juros.</label>
+                        <br>
+                        <input class="answer" type="radio" name="q4" value="0">
+                        <label>Fazer comprar desnessárias.</label>
+                        <br>
+                        <input class="answer" type="radio" name="q4" value="0">
+                        <label>Fazer um empréstimo, para obter mais dinheiro.</label>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <br/>
+    <div class="submitter">
+        <br>
+        <input class="quizSubmit" id="submitButton" onClick="submitQuiz()"
+               type="submit" value="Submit" />
+    </div>
+
+    <!--show only wrong answers on submit-->
+    <div class="quizAnswers" id="correctAnswer1"></div>
+    <div class="quizAnswers" id="correctAnswer2"></div>
+    <div class="quizAnswers" id="correctAnswer3"></div>
+    <div class="quizAnswers" id="correctAnswer4"></div>
+
+    <!--show score upon submit-->
+    <div>
+        <h2 class="quizScore" id="userScore"></h2>
+    </div>
+    </div>
+
+</aside>
 
 
 

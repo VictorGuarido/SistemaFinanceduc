@@ -7,6 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.validation.BindException;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -24,7 +25,7 @@ public class EventosController {
     @PostMapping("/cadastrar")
     public String cadastrarEventos(Eventos eventos) {
         service.cadastrarEventos(eventos);
-        return "CadastrarEventos";
+        return "telaCadastrado";
 
     }
     @ExceptionHandler({BindException.class})
@@ -39,5 +40,12 @@ public class EventosController {
         pagina.addObject("eventos", eventos);
         return pagina;
 
+    }
+
+    @GetMapping("excluir/{id}")
+    public String excluirEventos(@PathVariable("id") long id, Model model){
+        service.excluirEventos(id);
+        model.addAttribute("msg" ,  "Um evento foi excluido");
+        return "lista";
     }
 }

@@ -24,11 +24,8 @@ public class EventosService {
         return eventos;
     }
 
-    public Eventos listarEvento(String nome) {
-        Optional<Eventos> eventos = repository.findByNome(nome);
-        if (eventos.isPresent()) {
-            return eventos.get();
-        }
-        return null;
+    public void excluirEventos(long id){
+        repository.deleteById(id);
+
     }
 }
