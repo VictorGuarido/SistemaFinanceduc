@@ -5,7 +5,7 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.List;
 import java.util.Optional;
 
-public interface EventosRepository extends CrudRepository<Eventos, String> {
-    Optional<Eventos>findByNome(String nome);
+public interface EventosRepository extends CrudRepository<Eventos, Long> {
+    Optional<Eventos> findByNome(String nome);
 
 }

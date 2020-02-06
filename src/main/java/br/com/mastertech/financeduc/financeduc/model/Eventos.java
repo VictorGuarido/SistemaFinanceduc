@@ -1,5 +1,7 @@
 package br.com.mastertech.financeduc.financeduc.model;
 import javax.persistence.*;
+
+import javax.validation.constraints.NotBlank;
 import java.time.LocalDate;
 import java.util.Date;
 
@@ -10,18 +12,25 @@ public class Eventos {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     @Column
+    @NotBlank
     private String nome;
     @Column
+    @NotBlank
     private String email;
     @Column
+    @NotBlank
     private String descricao;
     @Column
+    @NotBlank
     private String imagem;
     @Column
+    @NotBlank
     private String tipo;
     @Column
+    @NotBlank
     private String data;
     @Column
+    @NotBlank
     private String horario;
     @Column
     private LocalDate dataCriacao;

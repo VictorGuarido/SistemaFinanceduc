@@ -8,6 +8,7 @@ html, body {
 	justify-content: space-between;
 	  padding: 200px;
       border: 1px solid #4CAF50;
+
 	background-color: rgb(206, 206, 206);
 }
 
@@ -22,7 +23,7 @@ html, body {
 }
 
 .formulario{
-    background-color: #D6D6D6;
+    background-color: #888585;
     margin: auto;
     width: 80%;
     border: 3px solid #333;
@@ -68,6 +69,7 @@ h1, h2, h3 {
 	margin: 0 auto;
 	padding: 0;
 	text-align: center;
+
 }
 
 p, ol, ul {
@@ -77,6 +79,7 @@ p, ol, ul {
 p {
 	line-height: 190%;
 	color: #6F6F6F;
+
 }
 
 a {
@@ -253,6 +256,7 @@ hr {
 
 #wrapper {
 	background: #00000 url(images/bg01.png) repeat;
+
 }
 
 #footer-wrapper
