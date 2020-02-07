@@ -1,3 +1,4 @@
+
 // scripts here:
 
 function submitQuiz() {
@@ -64,8 +65,8 @@ function submitQuiz() {
 
 $(document).ready(function() {
 
-$('#submitButton').click(function() {
-  $(this).addClass('hide');
-});
+    $('#submitButton').click(function() {
+        $(this).addClass('hide');
+    });
 
 });
