@@ -2,6 +2,13 @@ html, body {
 	height: 100%;
 }
 
+.textocad{
+    text-align: center;
+}
+.textocad button {
+    text-align: center;
+}
+
 .containerRecomendacoes{
 	display: flex;
 	flex-wrap: wrap;
@@ -336,30 +343,51 @@ hr {
 	{
 		overflow: hidden;
 		height: 400px;
-		background: url(https://images.pexels.com/photos/267582/pexels-photo-267582.jpeg?cs=srgb&dl=accounting-administration-books-business-267582.jpg&fm=jpg) no-repeat center;
 		background-size: cover;
+
 	}
-	#bannereventos
-    	{
-    		overflow: hidden;
-    		height: 500px;
-    		background: url(https://images.pexels.com/photos/3184424/pexels-photo-3184424.jpeg?cs=srgb&dl=photo-of-people-holding-each-other-s-hands-3184424.jpg&fm=jpg) no-repeat center;
-    		background-size: cover;
-    	}
-    	#bannerquiz
-        {
-       		overflow: hidden;
-        	height: 500px;
-        	background: url(https://images.unsplash.com/photo-1539628399213-d6aa89c93074?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80) no-repeat center;
-        	background-size: cover;
-        }
-        #bannersobrenos
-       	{
-            background	overflow: hidden;
-           	height: 400px;
-            background: url(https://images.pexels.com/photos/3183183/pexels-photo-3183183.jpeg?cs=srgb&dl=photo-of-people-leaning-on-wooden-table-3183183.jpg&fm=jpg) no-repeat center;
-           	background-size: cover;
-         }
+	#banner img{
+	      width: 100%;
+          height: 150%;
+          object-fit: fill;
+          background-position: center;
+	}
+
+	#bannereventos{
+        overflow: hidden;
+        height: 400px;
+        background-size: cover;
+    }
+    #bannereventos img{
+        width: 100%;
+        height: 150%;
+        object-fit: fill;
+        background-position: center;
+    }
+
+    #bannerquiz{
+        overflow: hidden;
+        height: 400px;
+        background-size: cover;
+    }
+    #bannerquiz img{
+    	      width: 100%;
+              height: 150%;
+              object-fit: fill;
+              background-position: center;
+    }
+
+    #bannersobrenos{
+        background	overflow: hidden;
+        height: 300px;
+        background-size: cover;
+    }
+    #bannersobrenos img{
+        width: 100%;
+        height: 130%;
+        object-fit: fill;
+        background-position: center;
+    }
 
 
 
@@ -501,7 +529,7 @@ hr {
 		text-transform: uppercase;
 		font-weight: 400;
 		font-size: 1.2em;
-		color: #6F6F6F;
+		color: #black;
 	}
 
 /*********************************************************************************/
