@@ -1,4 +1,6 @@
 package br.com.mastertech.financeduc.financeduc.model;
+import org.hibernate.validator.constraints.Length;
+
 import javax.persistence.*;
 
 import javax.validation.constraints.NotBlank;
@@ -17,8 +19,9 @@ public class Eventos {
     @Column
     @NotBlank
     private String email;
-    @Column
+
     @NotBlank
+    @Column(columnDefinition="TEXT")
     private String descricao;
     @Column
     @NotBlank
@@ -36,6 +39,8 @@ public class Eventos {
     private LocalDate dataCriacao;
     @Column
     private Boolean ativo;
+    @Column
+    private String video;
 
     public long getId() {
         return id;
@@ -115,5 +120,13 @@ public class Eventos {
 
     public void setAtivo(Boolean ativo) {
         this.ativo = ativo;
+    }
+
+    public String getVideo() {
+        return video;
+    }
+
+    public void setVideo(String video) {
+        this.video = video;
     }
 }

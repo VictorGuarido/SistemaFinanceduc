@@ -39,10 +39,10 @@
                 <li th:each="evento : ${eventos}" th:id="${evento.id}">
                     <img th:src="${evento.imagem}" th:alt="${evento.nome}" />
                     <footer>
-                        <p>Nome: <strong th:text="${evento.nome}"></strong></p>
+                        <p><strong th:text="${evento.nome}"></strong></p>
                         <p>Tipo: <strong th:text="${evento.tipo}"></strong></p>
+                        <p>Data: <strong th:text="${evento.data}"></strong></p>
                         <p>Horário: <strong th:text="${evento.horario}"></strong></p>
-                        <p>Data: <strong th:text="${evento.horario}"></strong></p>
                         <p>Descrição: <strong th:text="${evento.descricao}"></strong></p>
                         <a th:href="@{'/excluir/' + ${evento.id}}">Excluir</a>
                     </footer>

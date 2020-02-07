@@ -42,6 +42,11 @@ public class EventosController {
     @GetMapping("excluir/{id}")
     public String excluirEventos(@PathVariable("id") long id, Model model){
         service.excluirEventos(id);
+<<<<<<< HEAD
         return "telaExcluir";
+=======
+        model.addAttribute("msg" ,  "Um evento foi excluido");
+        return "recomendacoes";
+>>>>>>> dd204e0d4ca2004d639d63d6e52faacb761915f6
     }
 }

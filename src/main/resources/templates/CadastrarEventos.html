@@ -33,7 +33,9 @@
 				</div>
 				<!-- end #menu -->
 			</div>
-			<div id="bannereventos"></div>
+			<div id="bannereventos">
+				<img th:src="@{images/cadastro.jpeg}" alt=""/>
+			</div>
 
 			<div id="page" class="container">
 				<h1>Cadastre aqui os seus cursos, eventos e palestras</h1>
@@ -69,9 +71,10 @@
 						<input type="date" name="data" min="0000-00-00" max="2021-40-50" required>
 					</div>
 
-					<div>
+					<div class="campo">
 						<label>Descrição: </label>
-						<textarea  required name="descricao"></textarea>
+						<textarea  required name="descricao" ></textarea>
+
 					</div>
 
 					<button>Enviar</button>
