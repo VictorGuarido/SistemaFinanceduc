@@ -4,11 +4,8 @@ import br.com.mastertech.financeduc.financeduc.service.EventosService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.validation.BindException;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -45,7 +42,6 @@ public class EventosController {
     @GetMapping("excluir/{id}")
     public String excluirEventos(@PathVariable("id") long id, Model model){
         service.excluirEventos(id);
-        model.addAttribute("msg" ,  "Um evento foi excluido");
-        return "lista";
+        return "telaExcluir";
     }
 }

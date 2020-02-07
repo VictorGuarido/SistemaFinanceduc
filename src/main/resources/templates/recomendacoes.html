@@ -33,6 +33,7 @@
                 <!-- end #menu -->
             </div>
             <div id="bannerrecomendacao"></div>
+
         <aside className="main-container">
             <ul>
                 <li th:each="evento : ${eventos}" th:id="${evento.id}">
@@ -43,6 +44,7 @@
                         <p>Horário: <strong th:text="${evento.horario}"></strong></p>
                         <p>Data: <strong th:text="${evento.horario}"></strong></p>
                         <p>Descrição: <strong th:text="${evento.descricao}"></strong></p>
+                        <a th:href="@{'/excluir/' + ${evento.id}}">Excluir</a>
                     </footer>
 
                 </li>

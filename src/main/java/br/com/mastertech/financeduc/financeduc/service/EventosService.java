@@ -26,6 +26,5 @@ public class EventosService {
 
     public void excluirEventos(long id){
         repository.deleteById(id);
-
     }
 }
