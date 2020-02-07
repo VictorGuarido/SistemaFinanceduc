@@ -46,6 +46,6 @@ public class EventosController {
     public String excluirEventos(@PathVariable("id") long id, Model model){
         service.excluirEventos(id);
         model.addAttribute("msg" ,  "Um evento foi excluido");
-        return "lista";
+        return "recomendacoes";
     }
 }
